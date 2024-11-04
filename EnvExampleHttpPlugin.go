@@ -50,7 +50,7 @@ func (plugin EnvExampleHttpPlugin) Verify(request l9format.WebPluginRequest, res
                 event.Leak.Type = "config_leak"
                 event.Leak.Severity = "high"
                 event.AddTag("potential-leak")
-                event.Summary = "Found sensitive information in /.env.old:\n" + string(response.Body)
+                event.Summary = "Found sensitive information in /.env.example:\n" + string(response.Body)
                 return true
         }
 
